@@ -47,7 +47,7 @@ jobs:
         run: composer update --${{ matrix.stability }} ${{ matrix.composerflags }} --prefer-dist --no-interaction --no-progress
 
       - name: Execute tests
-        run: vendor/bin/phpunit --verbose --coverage-text --coverage-clover=coverage.clover
+        run: vendor/bin/phpunit --coverage-text --coverage-clover=coverage.clover
 
 #      - name: Run benchmarks
 #        run: vendor/bin/phpbench run src/Benchmarks
