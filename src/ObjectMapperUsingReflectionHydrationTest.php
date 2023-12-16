@@ -8,7 +8,7 @@ class ObjectMapperUsingReflectionHydrationTest extends ObjectHydrationTestCase
 {
     protected function createObjectMapper(DefinitionProvider $definitionProvider = null): ObjectMapper
     {
-        $definitionProvider ??= new DefinitionProvider(
+        $definitionProvider ??= new ReflectionDefinitionProvider(
             keyFormatter: new KeyFormatterWithoutConversion()
         );
 

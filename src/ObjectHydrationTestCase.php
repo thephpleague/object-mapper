@@ -280,7 +280,7 @@ abstract class ObjectHydrationTestCase extends TestCase
     public function using_default_key_conversion_from_snake_case(): void
     {
         $mapper = $this->createObjectMapper(
-            new DefinitionProvider(null, new KeyFormatterForSnakeCasing())
+            new ReflectionDefinitionProvider(null, new KeyFormatterForSnakeCasing())
         );
 
         $object = $mapper->hydrateObject(ClassWithCamelCaseProperty::class, ['snake_case' => 'camelCase']);

@@ -21,7 +21,7 @@ final class ObjectMapperCodeGenerator
 
     public function __construct(DefinitionProvider $definitionProvider = null)
     {
-        $this->definitionProvider = $definitionProvider ?? new DefinitionProvider();
+        $this->definitionProvider = $definitionProvider ?? new ReflectionDefinitionProvider();
     }
 
     public function dump(array $classes, string $dumpedClassName): string

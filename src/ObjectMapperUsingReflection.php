@@ -40,7 +40,7 @@ class ObjectMapperUsingReflection implements ObjectMapper
     public function __construct(
         ?DefinitionProvider $definitionProvider = null,
     ) {
-        $this->definitionProvider = $definitionProvider ?? new DefinitionProvider();
+        $this->definitionProvider = $definitionProvider ?? new ReflectionDefinitionProvider();
     }
 
     private function extractPayloadViaMap(array $payload, array $inputMap): mixed

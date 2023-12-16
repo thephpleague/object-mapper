@@ -20,7 +20,7 @@ class ObjectMapperCodeGeneratorSerializationTest extends ObjectSerializationTest
      */
     public function setupDefaultDefinitionProvider(): void
     {
-        $this->defaultDefinitionProvider ??= new DefinitionProvider(
+        $this->defaultDefinitionProvider ??= new ReflectionDefinitionProvider(
             keyFormatter: new KeyFormatterForSnakeCasing(),
         );
     }

@@ -21,7 +21,7 @@ class ObjectMapperCodeGeneratorHydrationTest extends ObjectHydrationTestCase
      */
     public function setupDefaultDefinitionProvider(): void
     {
-        $this->defaultDefinitionProvider ??= new DefinitionProvider(
+        $this->defaultDefinitionProvider ??= new ReflectionDefinitionProvider(
             keyFormatter: new KeyFormatterWithoutConversion(),
         );
     }

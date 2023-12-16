@@ -16,7 +16,7 @@ class DefinitionProviderTest extends TestCase
      */
     public function internal_classes_are_not_hydratable(): void
     {
-        $provider = new DefinitionProvider();
+        $provider = new ReflectionDefinitionProvider();
 
         $definition = $provider->provideHydrationDefinition(ClassWithFormattedDateTimeInput::class);
         $dateTimeProperty = $definition->propertyDefinitions[0];
@@ -29,7 +29,7 @@ class DefinitionProviderTest extends TestCase
      */
     public function mapper_settings_resolve_from_interfaces(): void
     {
-        $provider = new DefinitionProvider();
+        $provider = new ReflectionDefinitionProvider();
 
         $definition = $provider->provideSerializationDefinition(ClassWithInterfaceMapperSettings::class);
 
@@ -43,7 +43,7 @@ class DefinitionProviderTest extends TestCase
      */
     public function mapper_settings_do_not_resolve_from_parent(): void
     {
-        $provider = new DefinitionProvider();
+        $provider = new ReflectionDefinitionProvider();
 
         $definition = $provider->provideSerializationDefinition(ClassWithParentMappingSettings::class);
 
