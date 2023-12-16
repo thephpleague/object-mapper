@@ -1,0 +1,17 @@
+.github export-ignore
+phpbench.json export-ignore
+phpbench-bootstrap.php export-ignore
+src/**/*Test.php export-ignore
+src/**/*TestCase.php export-ignore
+src/Fixtures export-ignore
+src/Benchmarks export-ignore
+src/FixturesFor81 export-ignore
+src/IntegrationTests export-ignore
+phpunit.xml.dist export-ignore
+.gitignore export-ignore
+.gitattributes export-ignore
+.php-cs-fixer.php export-ignore
+README.md export-ignore
+CHANGELOG.md export-ignore
+composer.lock export-ignore
+phpstan.neon export-ignore
